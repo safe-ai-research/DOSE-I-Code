@@ -1,0 +1,48 @@
+# Column 1: Date (yy-mm-dd) and time (hh:mm:ss.sss)
+# Column 2: Logarithmic absolute spectral power in the frequency range 0.5-1 Hz (delta0)
+# Column 3: Logarithmic absolute spectral power in the frequency range 1-2 Hz (delta1)
+# Column 4: Logarithmic absolute spectral power in the frequency range 2-4 Hz (delta2)
+# Column 5: Logarithmic absolute spectral power in the frequency range 4-7.5 Hz (theta)
+# Column 6: Logarithmic absolute spectral power in the frequency range 7.5-13 Hz (alpha)
+# Column 7: Logarithmic absolute spectral power in the frequency range 13-20 Hz (beta1)
+# Column 8: Logarithmic absolute spectral power in the frequency range 20-30 Hz (beta2)
+# Column 9: Logarithmic absolute spectral power in the frequency range 30-49 Hz (gamma)
+# Columns 10-17: Logarithmic relative spectral power in the same frequency bands as Columns 2-9
+# Columns 18-25: Phase synchronization according to Rosenblum et al. (1996) between the two EEG channels in the same frequency bands as Columns 2-9
+# Column 26: Median Frequency (MF) according to Jordan et al. (2007), f_low=0.5Hz, f_high=30Hz, p=2, r=0.5, T=8s
+# Column 27: Spectral Edge Frequency 95% (SEF95) according to Jordan et al. (2007), f_low=0.5Hz, f_high=30Hz, p=2, r=0.95, T=8s
+# Column 28: Weighted Spectral Median Frequency (WSMF30) according to Jordan et al. (2007), f_low=8Hz, f_high=30Hz, p=0.4, r=0.5, T=8s
+# Column 29: Weighted Spectral Median Frequency (WSMF49) according to Jordan et al. (2007), f_low=8Hz, f_high=49Hz, p=1, r=0.5, T=8s
+# Column 30: Permutation Entropy (PE31) according to Olofsen et al. (2008), band: 0.5-45 Hz, n=3, tau=1, tie=0.5¬µV
+# Column 31: Permutation Entropy (PE32) according to Olofsen et al. (2008), band: 0.5-45 Hz, n=3, tau=2, tie=0.5¬µV
+#   Note: CPEI is defined as the average of the two PE measures according to Olofsen. 
+# Column 32: Permutation Entropy (PE61) according to Jordan et al. (2008), adapted to the sampling frequency of this dataset,
+#   and aligned with the other two PE measures; band: 0.5-45 Hz, n=6, tau=1, no tie
+# Column 33: SynchFastSlow (SFS) according to Miller et al. (2004), spectral analysis, 1-40-47Hz
+# Column 34: Corresponding bicoherence (CFS, normalized)
+# Column 35: PowerFastSlow (PFS) according to Miller et al. (2004), 1-40-47Hz
+# Column 36: Weighted Spectral Median Frequency (WSMF_Klimpel), optimized in Bachelor's thesis Klimpel (2020)
+#   parameters optimized for the present dataset: r=0.329, p=0.41, f_low=8.5 Hz, f_high = 27.5 Hz
+# Column 37: Median Frequency (MF_Jordan), identical to Column 26, but with T=16s
+# Column 38: Spectral Edge Frequency 95% (SEF95_Jordan) , identical to Column 27, but with T=16s
+# Column 39: Weighted Spectral Median Frequency (WSM30_16), identical to Column 28, but with T=16s
+# Column 40: Weighted Spectral Median Frequency (WSMF49_16), identical to Column 29, but with T=16s
+# Column 41: Weighted Spectral Median Frequency (WSMF_Klimpel_16), identical to Column 36, but with T=16s
+# Column 42: Heart rate derived from ECG (beats per minute; "?" indicates not measured or corrupted by artifacts)
+# Column 43: Heart rate derived from the pulse waveform (beats per minute)
+# Column 44: Respiratory rate (breaths per minute)
+# Column 45: Oxygen saturation (percentage)
+# Column 46: Propofol administration (in multiples of 10 ml)
+# Column 47: MOAAS score (Modified Observer's Assessment of Alertness/Sedation, range: 0 to 5)
+# Column 48: Consciousness state (yes=1, no=0)
+# Column 49: Examination / treatment indicator (yes=1, no=0), starting from insertion of the endoscope
+
+## References ##
+# Garbe, J., Eisenmann, S., Kantelhardt, J. W., Duenninghaus, F., Michl, P., & Rosendahl, J. (2021). Capability of processed EEG parameters to monitor conscious sedation in endoscopy is similar to general anaesthesia. UEG Journal, 9(3), 354-361.
+# Rosenblum, M.G., Pikovsky, A.S. & Kurths, J. (1996). Phase synchronization of chaotic oscillators. Phys Rev Lett. 76, 1804-7
+# Jordan, D., Stockmanns, G., Kochs, E. F., & Schneider, G. (2007). Median frequency revisited: an approach to improve a classic spectral electroencephalographic parameter for the separation of consciousness from unconsciousness. Anesthesiology, 107(3), 397-405.
+# Olofsen, E., Sleigh, J. W., & Dahan, A. (2008). Permutation entropy of the electroencephalogram: a measure of anaesthetic drug effect. British journal of anaesthesia, 101(6), 810-821.
+# Jordan, D., Stockmanns, G., Kochs, E. F., Pilge, S., & Schneider, G. (2008). Electroencephalographic order pattern analysis for the separation of consciousness and unconsciousness: an analysis of approximate entropy, permutation entropy, recurrence rate, and phase coupling of order recurrence plots. Anesthesiology, 109(6), 1014-1022.
+# Miller, A., Sleigh, J. W., Barnard, J., & Steyn-êRoss, D. A. (2004). Does bispectral analysis of the electroencephalogram add anything but complexity?. British Journal of Anaesthesia, 92(1), 8-13.
+# Klimpel, A. (2020). Bachelor thesis: EEG-Parameter zur Detektion der Sedierungstiefe. Martin-Luther-University Halle (http://www.physik.uni-halle.de/Fachgruppen/kantel/Bachelorarbeit_Klimpel.pdf).
+# Viertiˆ-Oja, H., Maja, V., S‰rkel‰, M., Talja, P., Tenkanen, N., Tolvanen-Laakso, H., Paloheimo, M. , Vakkuri, A., Yli-Hankala, A. & Meril‰inen P. (2004). Description of the EntropyTM algorithm as applied in the Datex-Ohmeda S/5TM Entropy Module, Acta Anaesthesiol Scand 2004; 48: 154-161
