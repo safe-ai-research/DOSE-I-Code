@@ -33,7 +33,7 @@
 # Column 44: Respiratory rate (breaths per minute)
 # Column 45: Oxygen saturation (percentage)
 # Column 46: Propofol administration (in multiples of 10 ml)
-# Column 47: MOAAS score (Modified Observer's Assessment of Alertness/Sedation, range: 0 to 5)
+# Column 47: MOAAS score (Modified Observer's Assessment of Alertness/Sedation, range: 1 to 5)
 # Column 48: Consciousness state (yes=1, no=0)
 # Column 49: Examination / treatment indicator (yes=1, no=0), starting from insertion of the endoscope
 
