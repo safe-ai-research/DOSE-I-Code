@@ -1,3 +1,20 @@
+#
+# ██████╗  ██████╗ ███████╗███████╗     ██╗
+# ██╔══██╗██╔═══██╗██╔════╝██╔════╝     ██║
+# ██║  ██║██║   ██║███████╗█████╗       ██║
+# ██║  ██║██║   ██║╚════██║██╔══╝       ██║
+# ██████╔╝╚██████╔╝███████║███████╗     ██║
+# ╚═════╝  ╚═════╝ ╚══════╝╚══════╝     ╚═╝
+#
+# A Project by
+# SAFE-AI Consortium | UNIVERSITÄTSMEDIZIN HALLE
+# https://safe-ai-research.github.io
+#
+# Code Author: Quang Vu Nguyen
+# Licence: GNU GPLv3
+#
+
+
 import re
 from pathlib import Path
 import helper_functions as hf
