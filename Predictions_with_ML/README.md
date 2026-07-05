@@ -2,9 +2,7 @@
 
 Machine-learning pipeline for binary (conscious vs. unconscious) classification from processed EEG (pEEG) features in propofol-sedated patients as presented in the AIME contribution [Towards Predicting Sedation Depth in Endoscopy with Large Clinically Annotated EEG Data of Continuous Propofol Sedation](https://safe-ai-research.github.io/DOSE-I/).
 
-**Code Author: Quang Vu Nguyen**
-
-**Licence: GNU GPLv3**
+**Code Author: Quang Vu Nguyen** | **Licence: GNU GPLv3**
 
 ## Pipeline
 
