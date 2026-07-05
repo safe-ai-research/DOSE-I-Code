@@ -16,7 +16,18 @@ Tools for converting raw waveforms and computing pEEG parameter time series.
 
 ### `Predictions_with_ML/`
 
-Intended for machine-learning models that use the extracted pEEG features to predict consciousness (binary: conscious / unconscious).
+Machine-learning pipeline for binary (conscious vs. unconscious) classification from pEEG features.
+
+- **`extract_and_join.py`** — Reads pEEG CSVs, drops deprecated features, fills NaNs with median, computes rolling means (10 s, 60 s), intersperses features, joins patient demographics (`GENDER`, `HEIGHT`, `ASA`, `AGE`, `BMI`, `WEIGHT`), and creates 5 s sliding windows (step 4 s).
+
+- **`helper_functions.py`** — Shared utilities: sliding-window generation, time-series splits, unified train/eval for four classifiers (dummy, decision-tree, BalancedRandomForest, Keras NN), feature-importance plotting.
+
+- **`randomForestGlobal.py`** — Global model: 10-fold cross-validation by patient ID.
+
+- **`randomForestLocal.py`** — Local (per-patient) model: 70/30 non-overlapping time-series split.
+
+- **`summarize.py`** — Aggregates per-fold results into mean, std, and 95% CI for loss, AUC-ROC, accuracy, precision, recall, F1. Outputs `.txt` and `.json`.
+
 
 ## Data
 
