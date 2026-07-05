@@ -1,3 +1,18 @@
+#
+# ██████╗  ██████╗ ███████╗███████╗     ██╗
+# ██╔══██╗██╔═══██╗██╔════╝██╔════╝     ██║
+# ██║  ██║██║   ██║███████╗█████╗       ██║
+# ██║  ██║██║   ██║╚════██║██╔══╝       ██║
+# ██████╔╝╚██████╔╝███████║███████╗     ██║
+# ╚═════╝  ╚═════╝ ╚══════╝╚══════╝     ╚═╝
+#
+# A Project by
+# SAFE-AI Consortium | UNIVERSITÄTSMEDIZIN HALLE
+# https://safe-ai-research.github.io
+#
+# Code Author: Quang Vu Nguyen
+# Licence: GNU GPLv3
+#
 
 import numpy as np
 import helper_functions as hf
