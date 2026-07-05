@@ -1,3 +1,19 @@
+#
+# ██████╗  ██████╗ ███████╗███████╗     ██╗
+# ██╔══██╗██╔═══██╗██╔════╝██╔════╝     ██║
+# ██║  ██║██║   ██║███████╗█████╗       ██║
+# ██║  ██║██║   ██║╚════██║██╔══╝       ██║
+# ██████╔╝╚██████╔╝███████║███████╗     ██║
+# ╚═════╝  ╚═════╝ ╚══════╝╚══════╝     ╚═╝
+#
+# A Project by
+# SAFE-AI Consortium | UNIVERSITÄTSMEDIZIN HALLE
+# https://safe-ai-research.github.io
+#
+# Code Author: Quang Vu Nguyen
+# Licence: GNU GPLv3
+#
+
 from pathlib import Path
 import numpy as np
 import re
