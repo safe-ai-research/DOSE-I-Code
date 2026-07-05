@@ -1,6 +1,6 @@
-# Predictions with ML — DOSE-I Study
+# Predictions with Basic ML — DOSE-I Study
 
-Machine-learning pipeline for binary (conscious vs. unconscious) classification from processed EEG (pEEG) features in propofol-sedated patients.
+Machine-learning pipeline for binary (conscious vs. unconscious) classification from processed EEG (pEEG) features in propofol-sedated patients as presented in the AIME contribution [Towards Predicting Sedation Depth in Endoscopy with Large Clinically Annotated EEG Data of Continuous Propofol Sedation](https://safe-ai-research.github.io/DOSE-I/).
 
 ## Pipeline
 
