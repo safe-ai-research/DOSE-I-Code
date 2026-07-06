@@ -22,7 +22,7 @@ Machine-learning pipeline for binary (conscious vs. unconscious) classification 
 
 Tools for converting raw waveforms and computing pEEG parameter time series.
 
-- **`conv-eegdata.awk`** — AWK script that extracts the two EEG channels from Dräger Infinity (Intellivue) CSV exports, handles missing data via placeholder insertion, and writes formatted time-series files for subsequent processing.
+- **`conv-eegdata.awk`** — AWK script that extracts the two EEG channels from PHILIPS Intellivue CSV exports, handles missing data via placeholder insertion, and writes formatted time-series files for subsequent processing.
 
 - **`pEEG_calculation.c`** — Custom C program (uses its own FFT implementation) that computes 49 time-varying EEG parameters from two-channel recordings: absolute, relative, and synchronization power in eight frequency bands (0.5–1, 1–2, 2–4, 4–7.5, 7.5–13, 13–20, 20–30, 30–49 Hz); Median Frequency (MF), Spectral Edge Frequency 95% (SEF95), and Weighted Spectral Median Frequencies (WSMF) following Jordan et al. (2007); three variants of Permutation Entropy (PE) per Olofsen et al. (2008) and Jordan et al. (2008); SynchFastSlow, CFS Bicoherence, and PowerFastSlow per Miller et al. (2004); and an optimised WSMF variant (Klimpel, 2020). Heart rate (ECG- and pulse-derived), respiratory rate, SpO₂, propofol dose, MOAAS score, and consciousness state are passed through from the source data. All parameters are computed with sliding windows of 8 s and 16 s.
 
@@ -31,7 +31,7 @@ Tools for converting raw waveforms and computing pEEG parameter time series.
 
 ## Data
 
-This code is intended for usage with the DOSE-I study. Using Dräger Infinity monitors (Intellivue system), EEG, ECG, pulse oximetry, and capnography signals were recorded during routine sedated endoscopies.
+This code is intended for usage with the DOSE-I study. Using PHILIPS monitors (Intellivue system), EEG, ECG, pulse oximetry, and capnography signals were recorded during routine sedated endoscopies.
 
 The DOSE-I dataset is available on [Zenodo](https://doi.org/10.5281/zenodo.18483291).
 
