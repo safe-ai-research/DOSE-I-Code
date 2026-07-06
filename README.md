@@ -4,16 +4,6 @@ Code accompanying the [DOSE-I study](https://safe-ai-research.github.io/DOSE-I/)
 
 ## Repository structure
 
-### `pEEG_estimation/`
-
-Tools for converting raw waveforms and computing pEEG parameter time series.
-
-- **`conv-eegdata.awk`** — AWK script that extracts the two EEG channels from Dräger Infinity (Intellivue) CSV exports, handles missing data via placeholder insertion, and writes formatted time-series files for subsequent processing.
-
-- **`pEEG_calculation.c`** — Custom C program (uses its own FFT implementation) that computes 49 time-varying EEG parameters from two-channel recordings: absolute, relative, and synchronization power in eight frequency bands (0.5–1, 1–2, 2–4, 4–7.5, 7.5–13, 13–20, 20–30, 30–49 Hz); Median Frequency (MF), Spectral Edge Frequency 95% (SEF95), and Weighted Spectral Median Frequencies (WSMF) following Jordan et al. (2007); three variants of Permutation Entropy (PE) per Olofsen et al. (2008) and Jordan et al. (2008); SynchFastSlow, CFS Bicoherence, and PowerFastSlow per Miller et al. (2004); and an optimised WSMF variant (Klimpel, 2020). Heart rate (ECG- and pulse-derived), respiratory rate, SpO₂, propofol dose, MOAAS score, and consciousness state are passed through from the source data. All parameters are computed with sliding windows of 8 s and 16 s.
-
-- **`pEEG_parameter_description.txt`** — Full specification of every output column, including the original references for each method.
-
 ### `Predictions_with_ML/`
 
 Machine-learning pipeline for binary (conscious vs. unconscious) classification from pEEG features.
@@ -27,6 +17,16 @@ Machine-learning pipeline for binary (conscious vs. unconscious) classification 
 - **`randomForestLocal.py`** — Local (per-patient) model: 70/30 non-overlapping time-series split.
 
 - **`summarize.py`** — Aggregates per-fold results into mean, std, and 95% CI for loss, AUC-ROC, accuracy, precision, recall, F1. Outputs `.txt` and `.json`.
+
+### `pEEG_estimation/`
+
+Tools for converting raw waveforms and computing pEEG parameter time series.
+
+- **`conv-eegdata.awk`** — AWK script that extracts the two EEG channels from Dräger Infinity (Intellivue) CSV exports, handles missing data via placeholder insertion, and writes formatted time-series files for subsequent processing.
+
+- **`pEEG_calculation.c`** — Custom C program (uses its own FFT implementation) that computes 49 time-varying EEG parameters from two-channel recordings: absolute, relative, and synchronization power in eight frequency bands (0.5–1, 1–2, 2–4, 4–7.5, 7.5–13, 13–20, 20–30, 30–49 Hz); Median Frequency (MF), Spectral Edge Frequency 95% (SEF95), and Weighted Spectral Median Frequencies (WSMF) following Jordan et al. (2007); three variants of Permutation Entropy (PE) per Olofsen et al. (2008) and Jordan et al. (2008); SynchFastSlow, CFS Bicoherence, and PowerFastSlow per Miller et al. (2004); and an optimised WSMF variant (Klimpel, 2020). Heart rate (ECG- and pulse-derived), respiratory rate, SpO₂, propofol dose, MOAAS score, and consciousness state are passed through from the source data. All parameters are computed with sliding windows of 8 s and 16 s.
+
+- **`pEEG_parameter_description.txt`** — Full specification of every output column, including the original references for each method.
 
 
 ## Data
